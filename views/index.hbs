@@ -1,12 +1,23 @@
 <div id="nav">
 <h1>Current weather data</h1>
-<p>{{data}}</p> 
+{{!-- <p>{{data}}</p>  --}} 
 
 <ul id="weather">
-    <li><h2>Temperature: {{temp}}</h2></li>
-    <li><h2>Humidity: {{humidity}}</h2></li>
-    <li><h2>Wind Speed: {{wind}}</h2></li>
+    {{#each data}}
+    <li><h2>{{@key}} : {{this}}</h2></li> 
+    {{!-- key of the objects and this is the valuesv --}}
+    {{/each}}
 </ul>
+<form action="/" method="POST">
+    <label for="location">Location: </label>
+    <input type="text" name="location">
+    <br>
+    <label for="countryCode">Country Code: </label>
+    <input type="text" name="countryCode">
+    <br>
+    <input type="submit" value="send">
+</form>
 </div>
 {{!-- data that we get from the api will show up here --}}
 {{!-- this file basically answers the question: how do you want to display the data --}}
+{{!-- on the input the method must be post to specify that we need the user to add information --}}

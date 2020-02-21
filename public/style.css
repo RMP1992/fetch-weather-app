@@ -17,10 +17,10 @@
     margin: 0;
     align-items: center;
     justify-content: space-evenly;
-    background: url('./images/snow.jpg');
+    /* background: url('./images/snow.jpg'); */
     width: 100vw;
     height: cover;
-    color: white;
+    color: black;
 }
 /* #nav h1{
     
